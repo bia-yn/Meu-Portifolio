@@ -23,6 +23,8 @@ body {
     margin: 0;
     padding: 0;
     font-family: Arial, sans-serif;
+    overflow-x: hidden;
+    
   }
   
   /* Estilos do menu */
@@ -41,10 +43,12 @@ body {
     padding: 14px 16px;
     text-decoration: none;
     font-size: 17px;
+    transition: 0.5s;
   }
   
   .navbar a:hover {
     background-color: #ddd;
+    color: #000;
   }
   
   /* Estilos responsivos */
@@ -114,6 +118,15 @@ body {
    height: 80vh;
   }
 
+  
+#chama{
+  width: 50%;
+  height: 40vh;
+  padding: 20px;
+  font-size: 32pt;
+  margin: auto;
+}
+
   #chama p{
     width: 60%;
     text-align: center;
@@ -162,13 +175,14 @@ button{
 
 @media screen and (max-width: 600px) {
   button {
-    width: 150px;
+    width: 200px;
     height: 40px;
-    padding: 10px;
+    padding: 5px;
+    margin: 20px;
   }
 
   button a {
-    font-size: 1pt;
+    margin: auto;
   }
 }
 
@@ -189,70 +203,128 @@ button a {
   font-size: 12pt;
 }
 
-/*--------  Sobre  ---------*/
-#sobre{
+/*--------  SOBRE MIM  ---------*/
+
+.sobre-mim{
   background: rgb(0,0,0);
   background: linear-gradient(0deg, rgba(0,0,0,1) 0%, rgba(255,140,148,1) 100%); color: #000;
-  margin: 0;
   width: 100%;
-  height: 90vh;
-  text-align: center;
-  padding: 20px;
+  height: 100vh;
+  display: flex;
+  flex-direction: row;
+  gap: 20px;
+  padding: 40px;
 }
 
-#sobre h1{
-  margin: 0;
+#sobre{
+  margin: auto;
+  width: 50%;
+  height: 50vh;
+  text-align: center;
+}
+
+#sobre h1 {
+  font-family: 'Cabin Sketch', cursive;
+  font-size: 50pt;
+  color: #dcedc2;
+}
+
+#sobre p{
+  margin: auto;
+  font-size: 30pt;
+  padding: 10px;
+  font-family: 'Dongle', sans-serif;
+  align-items: center;
+  color: #dcedc2;
+  display: flex; 
+
+}
+
+.sobre-mim img{
+  float: right;
+  margin: auto;
+
+}
+
+
+@media screen and (max-width: 600px) {
+  .sobre-mim {
+    height: 92vh;
+    display: flex;
+    flex-direction: row;
+    gap: 30px;
+    padding: 30px;
+  }
+
+  #sobre{
+    width: 60%;
+    height: 50vh;
+    text-align: center;
+    font-size: 10px;
+  }
+
+  #sobre img{
+    float: right;
+    width: 10%;
+    height: 100px;
+  }
+
+  .sobre-mim img {
+    display: block;
+
+    max-width: 40%;
+  }
+  
+
+  
+#sobre h1 {
+  font-size: 20pt;
+}
+
+#sobre p{
+  font-size: 20pt;
+  padding: 5px;
+  display: flex; 
+  justify-content: center; 
+  align-items: center; 
+}
+
 }
 
 
     /* Estilos do conteúdo */
 .portfolio {
   max-width: 1200px;
+  height: 80vh;
   margin: 20px auto;
   padding: 20px;
   box-shadow: 0 0 10px rgb(138, 136, 136);
+  display: flex;
+  flex-direction: row;
 }
 
 .project {
   display: flex;
-  flex-direction: row;
-  margin: 30px;
-  gap: 40px;
-
+  flex-direction: column;
+  margin: 5px;
+  gap: 5px;
+  text-align: center;
 }
 
-@media screen and (max-width: 600px) {
-  .project {
-    gap: 10px;
-  }
-
-  .project img {
-    max-width: 30%;
-    border-radius: 50px;
-    height: auto;
-    margin-bottom: 5px;
-    transition: 1s;
-  }
-
-  .project p {
-    width: 30%;
-    margin: auto;
-  }
-  
-
+.project p{
+  width: 90%;
+  margin: auto;
 }
-
-
 
 .project h2 {
   margin: 0;
 }
 
 .project img {
-  max-width: 50%;
-  border-radius: 70px;
+  display: block;
+  margin: auto;
   height: auto;
-  margin-bottom: 10px;
+  max-width: 70%;
   transition: 1s;
 }
 
@@ -261,9 +333,39 @@ button a {
 }
 
 
-.project p {
-  margin: 0;
-  width: 30%;
+@media screen and (max-width: 600px) {
+  .portfolio {
+    max-width: 90%;
+    height: 180vh;
+    margin: 10px auto;
+    padding: 20px;
+    gap: 20px;
+    flex-direction: column;
+  }
+  
+
+  .project {
+    margin: auto;
+    width: 100%;
+    gap: 10px;
+    flex-direction: column;
+    border: #ddd solid;
+  }
+
+  .project p{
+    width: 90%;
+  }
+}
+
+
+/*FOOTER*/
+footer{
+  width: 100%;
+  height: 92vh;
+  background-color: #ff8c94;
   text-align: center;
-  margin: auto;
+}
+
+footer h2{
+
 }
