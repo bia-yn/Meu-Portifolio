@@ -303,12 +303,19 @@ button a {
   flex-direction: row;
 }
 
+
 .project {
   display: flex;
   flex-direction: column;
   margin: 5px;
   gap: 5px;
   text-align: center;
+}
+
+.project a{
+  text-decoration: none;
+  color: #dcedc2;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 }
 
 .project p{
@@ -324,12 +331,12 @@ button a {
   display: block;
   margin: auto;
   height: auto;
-  max-width: 70%;
+  max-width: 80%;
   transition: 1s;
 }
 
 .project img:hover {
-  scale: 1.1;
+  scale: 1.2;
 }
 
 
